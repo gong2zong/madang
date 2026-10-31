@@ -1,0 +1,292 @@
+:root {
+  color: #1f2937;
+  background: #f7f5f0;
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.content-wrap {
+  width: min(100% - 32px, 1040px);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 56px 0 48px;
+  color: #ffffff;
+  background: #234033;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #d8e7b8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.intro {
+  margin-bottom: 0;
+  color: #e7eee3;
+}
+
+main {
+  padding: 36px 0 64px;
+}
+
+.auth-section,
+.search-section,
+.orders-section {
+  padding: 24px;
+  margin-bottom: 38px;
+  background: #ffffff;
+  border: 1px solid #e6e1d7;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgb(31 41 55 / 6%);
+}
+
+.auth-guide {
+  color: #526257;
+}
+
+.auth-form {
+  display: grid;
+  max-width: 520px;
+  gap: 8px;
+}
+
+.auth-form label {
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.secondary-button {
+  color: #234033;
+  background: #ffffff;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.auth-message {
+  margin: 18px 0 0;
+  color: #326344;
+}
+
+.auth-message.is-error {
+  color: #9b1c1c;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 1.25rem;
+}
+
+.search-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+button {
+  min-height: 46px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 13px;
+  border: 1px solid #aab5a8;
+}
+
+button {
+  padding: 0 20px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  background: #326344;
+  border: 1px solid #326344;
+}
+
+input:focus,
+button:focus {
+  outline: 3px solid #b9d5a1;
+  outline-offset: 2px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-heading h2,
+.section-heading p {
+  margin-bottom: 16px;
+}
+
+#result-count {
+  color: #526257;
+  font-size: 0.9rem;
+}
+
+.status-message {
+  padding: 18px;
+  color: #526257;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.status-message[hidden] {
+  display: none;
+}
+
+.status-message.is-error {
+  color: #9b1c1c;
+  background: #fff0f0;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e6e1d7;
+  border-radius: 12px;
+}
+
+.book-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.book-author {
+  margin-bottom: 22px;
+  color: #5c655d;
+}
+
+.book-price {
+  margin: 0 0 16px;
+  color: #234033;
+  font-weight: 800;
+}
+
+.purchase-controls {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.purchase-controls input {
+  width: 100%;
+}
+
+.purchase-message {
+  margin: 18px 0 0;
+  color: #326344;
+  font-weight: 700;
+}
+
+.purchase-message.is-error {
+  color: #9b1c1c;
+}
+
+.orders-list {
+  display: grid;
+  gap: 12px;
+}
+
+.order-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 18px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e6e1d7;
+  border-radius: 10px;
+}
+
+.order-card h3,
+.order-card p {
+  margin: 0;
+}
+
+.order-details,
+.order-date {
+  color: #526257;
+}
+
+.order-date {
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 40px 0 36px;
+  }
+
+  .search-section {
+    padding: 18px;
+  }
+
+  .search-controls {
+    flex-direction: column;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+  }
+
+  .purchase-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card {
+    grid-template-columns: 1fr;
+  }
+}
